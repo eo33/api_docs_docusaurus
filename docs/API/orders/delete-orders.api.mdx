@@ -1,0 +1,74 @@
+---
+id: delete-orders
+title: "Delete Orders"
+description: "This endpoint allows users to delete one or more orders."
+sidebar_label: "Delete Orders"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVU1vEzEQ/SvWHCuThLYU2FspIEUgNaLpKUSq157NGnbtre1tiFb739HYm+arcOJEDslmZ/zm6z1PBwq9dLoJ2hrIYF5qz9CoxmoTmKgqu/as9eg8C5YprDAgswaZday2jn4VOj9i380rdh/96tYH1jj7pBWyUCJ7iD5T9cBswVDIMh0iwBwHTDUigHmJzKFvrPHIpDWFdrVn6xJDSf4lMtugE5QrWwvPfCslel+0FRNGRQfT1jk6ipQy28MHDkGsPGQLuI02WHLwKFunwwayRQfXs+kXpMdlv+Tg8LFFHz5YtYGsi3+1QwVZcC1ykNYENIFMomkqLWNe4x+eGtmBlyXWgp7CpkHIwOY/UAbg0DiqImj0ZB2as+conBMb4EeT+ap9eC6LTT/6o/4BBx2w9ntAPjhtVidI90Y/tsi0QhN0odGxwjomTIIeQd/3fK/axXOKSw74S9RNhQeJL+Dq7WV+eVW8VvJCvb+4muSX8uIc8Rz4YBLvDk0KYdn3Q6A075j4+WRCP4f53u2mvHUesZstOw6HPnRjS0v4Z2MS8qex6wrVCvdnlVtboTAnPZ4aRZHwkL0xOyLvQK1I4n3kEfSEFGu4sW1KewilTcAVupNQ85dYv1NGtdlRhPq9N8HDmhKrD4OfD0O6fHEuiKxG78WKKnu2xBrevHTA//FAz6HGUFoFGTTWx/aLUEIG41TQOOUFJFj3RNolvbauggzKEBqfjcehxKJ1RofWYe6sH0lbn3Rr5qxqZRxCQoKeHwNVVoqqtD5kbyaTyakSyfx8esmBuPRtd1l8+oca4aBNYU9bGe/pQlfxmgxCmySE2wbN9WzKfINSFwPXfdR3NCdyXM+mnrhydkbc+bztGfvgrD87I9EEHagAOLVvMbaR7g4iAQcaTsrx9WgymhAZaKK1iHIzoibcj2mRDNfwUYO7nWb/+32UpB3wVxg3ldCG2hXJ2A0CGG7f1KQogSUH4iaZui4XHu9d1ff0+rFFF7cXhyfhtMhphgsiUYlCoYua+UkLDm5Sh1/NKQFyr9q4eo5vSBJHOnEtJTbhr77LPRXPbu/mwCEflmdtFZ1xYg08fmcAHGyTWEPbld51UAmzasWKfBMmfX4D+vUAhw==
+sidebar_class_name: "post api-method"
+info_path: API/orders/the-furniture-bros-orders-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Orders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/orders/delete"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows users to delete one or more orders. 
+- Users must provide the `orderId` of each order to be deleted.
+- The response confirms whether the operation was successful and the number of orders deleted.
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"orderId":{"type":"array","description":"List of order IDs to be deleted.","items":{"type":"string","description":"Unique identifier for an order."}}},"required":["orderId"],"example":{"orderId":["674b46f1dc3d9360b4c32ee2","674b46a8dc3d9360b4c32ede"]}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Confirms the number of deleted orders.","content":{"application/json":{"schema":{"type":"object","properties":{"acknowledged":{"type":"boolean","description":"Indicates whether the deletion request was acknowledged."},"deletedCount":{"type":"integer","description":"The number of orders successfully deleted."}},"example":{"acknowledged":true,"deletedCount":2}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

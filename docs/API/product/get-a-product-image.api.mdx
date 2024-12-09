@@ -1,0 +1,71 @@
+---
+id: get-a-product-image
+title: "Get a Product Image"
+description: "This endpoint allows you get the image of the product. The image is in the .webp format."
+sidebar_label: "Get a Product Image"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVN1r20AM/1cOPW3hcJxuXYffOuhKYbDSZk8h0Istx8fsO/cktw3G//uQY6dp0uxt7MkfOun0+5BayJDSYGu23kEC88KSQpfV3jpWpiz9M6mNb9QaWXGBylZmjcrn/UcdfNakHKn5LmJJWdcHo2dc1Sr3oTIcgQY2a4JkAbfbJFhqqE0wFTIGCbTgTIWQQG5L7F81WOmpNlyAhoCPjQ2YQcKhQQ34Yqq6lITZRRzPZvHXT1/Ozy76a0EDpQVWBpIWeFPLKeJg3Ro6fQR5B2TAMDag2KuGMFK/CHtID9dXczX0r0pL/PDKFXv1ZPFZOBvLkTIuk0QbDipTBN1SIFHtHSFJm2dxLI+3zd03aYpEeVOq8XCk7pCb4Oi0HqAh9Y7RsVTsj0x7WpL2JC8atlJBAivrTNhA13Wdhs/vtoWoKiSSu/cikbB7/l4CnUzoNFTIhc8ggTUy6K3eCUxHFqftSFsnumJ4Gg3ThBISKJhrSqZTLjBvgrPcBFwFT1HqKzhUe1DPeqe2laDTh4VKn5qy8MTJeRzHRyV+SHiXvRSX5v4Ycj9K0rkSLYwdBPtZo7u8vVFUY2pzmxo5TjInfXh01+XtDYmsk4n48/uIS30LniaTfp4s9+4/ju+KjHfdv7kLNAiD2y5nURzFIlvtiSvjBMcwh9fIyuxq3YiLDrloX332T1fH1qmMLzytS2OdNNxr1g5uWcDoFtCQ7DbIUoPoKPG2XRnCX6HsOvn92GDYQLJYangywZqVcLloIbMk7xkkuSkJ/4L3w92wkD6q/7RCThAz/DRuI0qbspEv0PAbN/vbtVt2Ggo0GYYe+TZ8maZY817i3vYQr+9m9fpqDl33ByN6J6c=
+sidebar_class_name: "get api-method"
+info_path: API/product/the-furniture-bros-product-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a Product Image"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/products/{filename}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you get the image of the product. The image is in the .webp format.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filename","in":"path","required":true,"example":"1700110836527.webp","schema":{"type":"string"},"description":"The product image filename to use. Use the `GET Product list` endpoint to view all products and their image filenames."}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns the image of the product.","content":{"image/webp":{"schema":{"type":"string","format":"binary"}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,64 @@
+---
+id: get-addresses
+title: "Get Addresses"
+description: "This endpoint allows you to get the list of addresses."
+sidebar_label: "Get Addresses"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1ld9v2zYQx/8V4l4GBISt2FH8480LtiLo1gVL2j14RkCRJ4utTKq8U1rD0P8+ULZlJU6Rh2JPEvjje3e8z93twCDpYCu23sEcHgpLAp2pvHUsVFn6byS2vhbsxRpZcIGitMTC50IZE5AIafCvAwms1gTzJdwUqL/4mmElgVDXwfIW5ssdLO5u32P8XTUrCQGp8o6QYL6DUZLEz3Nf7mutkSivS3E8PBB/I9fBUetITRh+oaMfwrrch42KtwcgQXvH6DjqqqoqrW53hp8piu+AdIEbFf94WyHMwWefUTNIqIKvMLDdu/ZoTe8QcbBuDfKFqx+d/VqjsAYd29xiELkPnY+dhwG1D2YAjYS4/prx57q3p5CEynzNPU0ir61iNOKb5aLdOGXk/wij9dupDb4t9EFtMCLSu9o0Ejr/egoqBLU9E/jjJWOvxruXlmAZN/R2Kg9ib7v/cHrLYxSl1weyGgkbZV1PJfO+ROVeyZ6J1CEJG0VsD9U9wFHnuNYK/2SWTlLtcz8+PvXUrGNcYziT+4SBIl9fcPtS6ARsIwG/q01VYgcTXKfptTETlSZ4ZbJ0cj0dZThKNZzo7g6mKsmnsxxR6YnR2syyS2PgiBPkNhALpbWvHcNzUpa9xMF4Ohbv0bG4Zynut8bhVny4/0eMkiSRYlETB1VaBccc5aoklJ0f11meXunZbDIaT68ms+lYzSaXV9DIvo1pIm58WVpHrZU/scx8HRyKT7c3YvwDQxzqvh0z1rPsOp+Opkal4yTNlJlNIPa9NinpuNmn6OrVxocoNkik1ih6Oy0h6WsX6IcXIqzIhY9urbEtCcUFzGF4iHcYuznETh2eMOyfuw4lzKFgrmg+HHKBeR2c5TpgFjwNtN+cQXQXvKl126f2Su2bPheKJVQWnnieJklyXvJxu7u9khD7+Xms7YTKbYkiNnhlD7Pgrwrd4u5WUIXa5odmTx3QiwPQi7vbtqQvLmKN/36MS/waPF1cxF7CliPkcL7fiRxt3T+zBRKe9qUEc7gcJIMk5qvyxBvVdosD6++Qj0pIL19hdxpbPzWL9yXP+J2HVRkBjSMnZmN3AGDZAS+hRWAlIeYm7ux2mSL8GMqmictfawzt2JbwpIJVWXyf5aqRUKAysdCXO/gSJzsstMYq4vSkyrrt7i8nb0xsR+S73x6gaf4DvIrn/w==
+sidebar_class_name: "get api-method"
+info_path: API/address/the-furniture-bros-address-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Addresses"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/address/list"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you to get the list of addresses.
+
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns the user's address information.","content":{"application/json":{"schema":{"type":"object","properties":{"_id":{"type":"string","description":"Unique identifier for the user address record."},"user":{"type":"object","description":"Information about the user associated with the addresses.","properties":{"_id":{"type":"string","description":"Unique identifier for the user."},"name":{"type":"string","description":"Name of the user."}}},"addresses":{"type":"array","description":"List of addresses associated with the user.","items":{"type":"object","properties":{"address":{"type":"string","description":"The address of the location."},"main":{"type":"boolean","description":"Indicates if this address is the main address."},"_id":{"type":"string","description":"Unique identifier for the address."}}}},"__v":{"type":"integer","description":"Version key for the address record."}},"example":{"_id":"6556dd7a50e4db57682be25c","user":{"_id":"6555a0f89feeac7dccd9b1dd","name":"first account"},"addresses":[{"address":"383 Kent St, Sydney NSW 2000, Australia","main":false,"_id":"656bf54c99723847983a9714"},{"address":"80 Collins St, Melbourne VIC 3000, Australia","main":true,"_id":"656d3c9b6f828da5305bad97"}],"__v":53}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-a-product
+title: "Delete a Product"
+description: "This endpoint allows you get delete a product."
+sidebar_label: "Delete a Product"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVE1v2zAM/SsCT1tgOG63doVvGZoNwQos6NpTEaCKTcfqbEkV6X7A8H8f6NjpR9oBO80Xy6b4RL73xBZypCwYz8ZZSOGiNKTQ5t4Zy0pXlbsn9egatUFWOVbIqLTyweVNxjFEQJg1wfAjpFctzJaLHyhL0HltLKy6VQReB10jY6B+j9U1QgqFqbBfRmDkYK+5hAgC3jYmYA4phwYjwAdd+0oSDr4kB8nJ4fHJ8XHyKb7HtZfTsxJrDWkL/OhlF3EwdgNdtNcXjlUrU+sNqrEAxU41hLG6JFRcorr+Pr9Qy2FvZYivnwhhp+4M3gsxIxwpbXNJNOEVMsUg/bPeSOcwQMJKuiTvLCFJ5YdJIq+X9f5qsgyJiqZS4+ZYnSM3wVJfJbHmhpQr+i/nMWhJFUkyZxktC6j2vjJZH5nekCC3+5y59Q1mDBH4IDhstnXVtNkn9i1e3y2l654JOADCgrEenJRDJ08En9+kAFHVSCSUPovEIu7RWwn0bkIXQY1cuhxS2B4t3YrjUpiOOk7bUbiu93W4Gy3bhApSKJk9pdMpl1g0wRpuAq6Dozhz9R4vg9jGWbVFgi56DVS5TFelI06PkiTZgziT8C57JfekcPtd9zdWKleiuzaDP356tLPlQpHHzBSDB0gVLvTh0d+z5aJXbjIRJb+NfamvwdFkIm5iw/3924/vQMazfr04CyIQBrdVHsRJnIhy3hHXujfiMAlOx6kyXpBXRLRPhv738TS4l/GBp77SxkoNvQztYIArGA0AEaS7sbSKQKSReNuuNeFlqLpOft82GGTGrSK408HotdBz1UJuSNY5pIWuCP/SxYfzYcp9VP9pLr1DzPBT20cRT1eNfEEEv2WoP43sbtVFUKLOMfSdb8OzLEPPzxL3ho+YeHcPT+dn84s5dN0fsO5A+Q==
+sidebar_class_name: "delete api-method"
+info_path: API/product/the-furniture-bros-product-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a Product"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/products/{filename}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you get delete a product.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filename","in":"path","required":true,"example":"1701082686603.webp","schema":{"type":"string"},"description":"The product image filename to use. Use the `GET Product list` endpoint to view all products and their image filenames."}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns the status of the operation.","content":{"application/json":{"schema":{"type":"object","properties":{"msg":{"type":"string","description":"The status of the operation."}},"example":{"msg":"Item deleted"}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

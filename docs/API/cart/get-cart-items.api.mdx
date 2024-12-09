@@ -1,0 +1,64 @@
+---
+id: get-cart-items
+title: "Get Cart Items"
+description: "This endpoint allows you get the current items in your cart."
+sidebar_label: "Get Cart Items"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu4zYQ/RViHgPBpp34+tR0d7sI2m6z3QR9SI2AokYWsxKp8OJsYOjfi6EdR3IcOOjmyTI5c3g4N541ZOikVbVXRsMcrgrlGOqsNkp7JsrSPDj2aAJbome+QCaDtag9Ux4rx5SmTcuksL73r4YEvFg6mN/AB2E9LBJwKINV/hHmN2s4v7z4Helz0SwSsOhqox06mK9hyDn9dNl8C1Kic3ko2ZNxj/2NPljtIptSOc9MfogNJCCN9qg94Yq6LpUUhNu/cwS+BicLrAR9+ccaYQ4mvUPpIYHamhqtVxtqtyprGTlvlV5Cskf1Wqv7gExlqL3KFVqWGxs5GpuhhSaB4NAeOq0LdKFzY6vIlInUhE3YyZc9FIbVpZCYtYDfmW0k2SSgRYXHcb6ICin+bU+shCqPu34iMyayzKJzXYymSSBmtIUirBWPL0D+2M9/Oy77EK+kt7YmC9Ifz8xH9EKVrpWVrWvvvZOww/1fiWh7q0os3+B+QWYsVyXqV4Bqq2QbSIcqjVHuAl2S2SH/jtkxOh+f/x3CcqbMPpig2zlT2uPyAKEvkSehBK28Y+QbQW5vV29wvyqQrdC6A0xYe09paVE4dOyhQI0r7CSSKccqk1GS6XCq7/sgtI9z8SiHr1vTPQKbOsftbX6u4KhVOu0TWf5MlOIMfkuIyHA/PgngD1HVJe56Ccaj0VhgNpzgWGY8PR1MszTl0wye5+rOcCR4Pp3liEJOMimzWTrIyHDTSpAr6zwTUsYS2g2szfrtdv2XJa32pKngeRrddKZF67zhcNw9Lx8+n/dPoTyyDN132DUkDCacDwZ8Oh1Pzma9B0xr2DXZmO8H+E+BErVwTHh2F5w3DANDaxwLpScnx1ahrIMXHtlKeYFkKcIyIA2nVsPMZtuk8k4RDnnydJ/J2WyKk9FsxhEnIz6WU8TZ6Aya5PDtc8wRxzwdCZ5KycXsdHAqn2/vvDHl3sUn0/FgNOWzwdGLX1cZdi8wOMx/1OU/He7xnwJJjug54LzZVPfZQdGByCp0jiZiaye22eiQg3vVoUmgQl8Y4rXE+PQIX8Ac+lT1/U1VkUay1CSxvoKlUiy8r9283/cF5sFq5YPF1BoX6/HlzI1JoR7bIMVUdYFKI0VZGOfnI875y3eUtnfeiwSUzs3Lm0Z1SK8EI2kl1FaF/VWjPr+8YK5GqfKtzHK74UJSkJ1fXsRX/uSEZsJvT5div1rjTk6oSL3y1PDwcn+D8HTKt84pkMB2wFBt9XiPx9fKOF+J+NJsy/Az+g3MxTboew/STiu+gwTeDEuPP3y/LoXSUfzZqIk2+b8Bst5JlEUClBpaX69T4fDalk1Dy/cBbdTLCayEVSKlCN0smgQKFKRyqGS+k6SGcymxJsyVKENUTPuSl/K6K8fPn66gaf4DXqgVwQ==
+sidebar_class_name: "get api-method"
+info_path: API/cart/the-furniture-bros-cart-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Cart Items"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/cart/items"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you get the current items in your cart.
+
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns the list of items in your cart.","content":{"application/json":{"schema":{"type":"object","properties":{"_id":{"type":"string","description":"Unique identifier for the order"},"user":{"type":"object","description":"Information about the user who placed the order","properties":{"_id":{"type":"string","description":"Unique identifier for the user"},"name":{"type":"string","description":"Name of the user"},"email":{"type":"string","description":"Email address of the user"}}},"items":{"type":"array","description":"List of items in the order","items":{"type":"object","properties":{"product":{"type":"object","description":"Details about the product.","properties":{"_id":{"type":"string","description":"Unique identifier for the product."},"name":{"type":"string","description":"Name of the product."},"image":{"type":"string","description":"Image filename of the product."},"price":{"type":"number","description":"Price of the product."},"description":{"type":"string","description":"Description of the product."},"soldCount":{"type":"integer","description":"Number of units sold."},"__v":{"type":"integer","description":"The version of the product. The version increases whenever the product is modified."}}},"quantity":{"type":"integer","description":"Quantity of the product ordered."},"_id":{"type":"string","description":"Unique identifier for the item in the order."}}}},"__v":{"type":"integer","description":"The version of the cart. The version increases whenever the cart is modified."}},"example":{"_id":"6556aed27e6cd0b318dbb08d","user":{"_id":"6555a0f89feeac7dccd9b1dd","name":"first account","email":"first_account@gmail.com"},"items":[{"product":{"_id":"6555a2269feeac7dccd9b1f2","name":"White desk","image":"1700110886749.webp","price":60,"description":"Maecenas at justo eu eros ultrices vulputate vitae at augue.","soldCount":99,"__v":0},"quantity":20,"_id":"67498e75990ee7506c8ee954"},{"product":{"_id":"655fefee60b5a0bcc0a9313c","name":"stool","image":"1700786158091.webp","price":60,"description":"Umde","soldCount":1,"__v":0},"quantity":25,"_id":"67498e82990ee7506c8ee958"}],"__v":100}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

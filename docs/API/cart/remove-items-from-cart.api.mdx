@@ -1,0 +1,71 @@
+---
+id: remove-items-from-cart
+title: "Remove Items from Cart"
+description: "This endpoint allows you to delete specified items from the user's cart."
+sidebar_label: "Remove Items from Cart"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu2zgQ/RViXhYItLEc3/WWtlnA2AKbTdMnwwgocmSxK5EKSdk1BP17MZTvbostUj/YsmbmcGbOXNiARCesqrwyGhJ4zpVjqGVllPaMF4XZOLY1NfOGSSzQI3MVCpUplEx5LB3LrCmZz5HVDu0fjglu/S1E4PnKQbKA99x6WEbgUNRW+S0kiwbuH+d/Iz0u22UEFl9rdP6dkVtImvBXWZSQeFtjBMJoj9qTiFdVoQQnb3tfHLncgBM5lpye/LZCSMCkX1B4iKCypkLrFTqSBndP1Li1fAvRRQY+KueZyVhljayFZ/MPjoK3WJo1HoPdR3kJ6rxVegVt20aAX3lZFXhy9gLGk+FsipPRbBYjTkbxWEwRZ6MhLNs2GFl0ldGuc/kujunn3MNPtRDoXFYXbK98y57Q11a7johKco8y+Mh45tF23CmjyeXflM4XJa/jvszmZ61ea2RKovZUNJZlxp4ksI2AyuYtQGTPNrlhZrOL/wD9a4xbLLnSSq92ha30T5n+QVp2dfOWiHYQIYTXmmsfuuaAp7THFdorwH93qhTLCcx5HG30VuIoDxeYoXBfXtb/w8nnHNkarVNG7/0MIOxUoLSwyB06tslR4xqPJcOUY6WRYQDRyWddFiKD8Wg05ijvJjgWMk4H/alM03gqYV9rpDHicTadZYhcTKQQcpb2pTyyvDghktQzzBDHcTricSpEzGeD/kDAKT3DONqfH1p8enfR4lNoo3PU8WiQci6n4+l41hfDu0E8zibZOWr/FHUWD8U56kQCDdCQ+37c382Q4XfHBiIr0Tm+QnYiCSUx+p6B+6FBG0GJPjfkV7cVqA24zyGBHrHUO7x1aInVkNHaFpBA7n3lkl7P55jVVitfW0ytcbfClFfl8tili4qiQwpJPAcqjOBFbpxPRnEcX7c3iQ/Wywho0D0dN87Dr03pCJTOzHW2wubMVIGM5itXu1n0T4X6/nG+35rdrHWHZqLlyO4f546a4eaGmuCvfVLYO2vczU3YpcqTh3At7xD2p3w6OwUi2HUUJNC/jW9j4royzpc8jHrNS0J96nbb/LjOw86+SGRzXBy/9ZrQzQuPX32vKrjSYScQwc2upBYg9u6EolpGQGyToGlS7vCzLdqWXr/WaMOlIoI1t4qnlLQFcZYjl9T6iwb+o3sHvO9i+fOZjif1og4b4nIhUrl1FvdCYOV/qrs86YsPDx8fnh8ggnR3qymNJCvLNxCF7wQgAlN1VNG1h941UHC9qvmKdDtU+nwDJ3pH2A==
+sidebar_class_name: "delete api-method"
+info_path: API/cart/the-furniture-bros-cart-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove Items from Cart"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/cart/delete"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you to delete specified items from the user's cart.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"array","description":"List of product IDs to remove from the cart.","items":{"type":"string"}}},"example":{"items":["67498e75990ee7506c8ee954"]}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns the updated cart after deletion.","content":{"application/json":{"schema":{"type":"object","properties":{"_id":{"type":"string","description":"Unique identifier for the cart."},"user":{"type":"string","description":"Unique identifier for the user who owns the cart."},"items":{"type":"array","description":"List of remaining items in the cart.","items":{"type":"object","properties":{"product":{"type":"string","description":"Unique identifier for the product."},"quantity":{"type":"integer","description":"Quantity of the product in the cart."},"_id":{"type":"string","description":"Unique identifier for the item in the cart."}}}},"__v":{"type":"integer","description":"The version of the cart. The version increases whenever the cart is modified."}},"example":{"_id":"6556aed27e6cd0b318dbb08d","user":"6555a0f89feeac7dccd9b1dd","items":[{"product":"655fefee60b5a0bcc0a9313c","quantity":40,"_id":"67498e82990ee7506c8ee958"},{"product":"65653baad868691c42306f7f","quantity":41,"_id":"6749904c990ee7506c8ee97d"}],"__v":101}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: edit-a-product
+title: "Edit a Product"
+description: "This endpoint allows you to edit a product."
+sidebar_label: "Edit a Product"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFV9tu20YQ/ZXFvLQ1GImOo7jmmxOkhdECNRL7yRWcFTmUNiV36Z2hFEPgvwezJHWxaFcJUNRP9F7mcuac2dEaMqTUm4qNs5DAzcKQQptVzlhWuijcitSjqxU7hZlhpVXlXVanPIIIWM8Jkju4bpdgGgFhWnvDj5DcreHy+uoPlE/QWWksTJtpBJX2ukRGT+GM1SVCArkpMHxGYCSQSvMCIvD4UBuPGSTsa4wAv+qyKuTC6Xkcn57Gv569nbw+H61wVkEElC6w1JCsgR8rOUXsjZ1DEx3kiX0iypR6jqoPQDKtCUfqllDxAtXn3z/cqC5DVRjiz1uA2KmlwZUA1ZsjpW0mF41/YplGIPlLSkj8zmWPEuh+XJdW5c6XrzLNWqXOsjbW2HkIxOJKZcjaFDT620IEso+WxUpZF2wq7Xm8uS7LB3i42RdMGSKovKvQs0GS3bYIT1EbAk2CCDC5PAS1w4ZtbSh83BvGUqAPMAyZl1g1QwIzY7V/fNbhpjb7Tn+iFuGROKm8SXed2Lqcod91khdO87M+wv2XsprET1l0LF47q0fAtntcEiNXZO9d3da5c2gs4zxkN+yRHetCtRCIy9oaJiWW9jyeTZrwJ6Skyllq2fA6jg+Z+alOUyTK60L1h0fqI3LtLW3oaWyL9nCmO3zVVVWYNBwcf6EWzGPJWtL8OOyJNdfUByImgkMRTxNBXWWaMet717+6vTfZcW5rax5qVCZDyyY36EXS+1g00fdIbkhuL8nq0MR/LaBh8fyIXl7Syg+I4SUhNBHc3y+PNLRETwMxqd09Y1OPmpDUaoEWl7hXdWVIlS4TRojzILuNEjtW9y+p6sipaKO6QtrjIWcDK+HtZDLRp/mbixxRp+dZmmYXs1OU17R7X2feraxiPSswC49sS57hZ7Sjwln8FAmW8cCQ0mrHHuyV5SLuYI373vJmsJ0gqhKJ5IHc2QlVmQxdoGcvNBGUyAsnQFR1EK4MDwmM+yd5vO4F0Eiw6Jf99FH7AhJYMFeUjMe8wLz21nDtceYdjVJXHrChA18K3lqCJnpqqHCpLhaOOJnEcXxg4k/Z3tyeysiTu8OUwzAmkfeTQNto/6rQXl5fKaowNXnXRWnTZHoKXV5fhd53ciIc/a3PS73zjk5OwvhmOLw7h/sbI72vT3u+IIKO88KgUTyKQwNxxKW223kCPrQTY0/Xg3aweRC+d+5s9cr4lcdVoU3bz6UC6672d9DXHiJINsPlNAKpiuyv1zNNeOuLppHlhxq9TKrTCJbam8BrIUhmKGgGklwXhC+k8PPHblb9Rf1P0+UzwHSL2koHWeqilv8ggn9kNN8O3s20iWCBOkMfMm+337f5vboRI9vrQ/OmyKC9dJmmWPHO8YPnXki/Ee317Q1EMOsG4tJl4QeB82UwG20/k7tp0zTfAJ10ZSY=
+sidebar_class_name: "put api-method"
+info_path: API/product/the-furniture-bros-product-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Edit a Product"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/products/{filename}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you to edit a product.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filename","in":"path","required":true,"example":"1700110836527.webp","schema":{"type":"string"},"description":"The product image filename to use. Use the `GET Product list` endpoint to view all products and their image filenames."}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"An form-data containing the new details.\n","content":{"multipart/form-data":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"The new name of the product.","example":"sample_item"},"image":{"type":"string","format":"binary","description":"The new filename of the product's image."},"price":{"type":"number","format":"float","description":"The new price of the product.","example":50},"description":{"type":"string","description":"The new description of the product.","example":"sample description"},"soldCount":{"type":"integer","description":"The new total number of units sold.","example":35}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns the new information of the product.","content":{"application/json":{"schema":{"type":"object","properties":{"msg":{"type":"string","description":"The status of the operation.\n"},"updatedProduct":{"type":"object","properties":{"_id":{"type":"string","description":"The unique identifier for the product."},"name":{"type":"string","description":"The name of the product."},"image":{"type":"string","description":"The filename of the product's image."},"price":{"type":"number","format":"float","description":"The price of the product."},"description":{"type":"string","description":"The description of the product."},"soldCount":{"type":"integer","description":"The total number of units sold."},"__v":{"type":"integer","description":"The version of the product. The version increases whenever the product is modified."}}}},"example":{"msg":"Product updated successfully","updatedProduct":{"_id":"6555a1f49feeac7dccd9b1ee","name":"brown tablede","image":"1700110836527.webp","price":30,"description":"this is a brown table","soldCount":90,"__v":0}}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: upload-a-product
+title: "Upload a Product"
+description: "This endpoint allows you to upload a product."
+sidebar_label: "Upload a Product"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVVGP0zAM/iuRX5BOZRuge+nbQEI6gcTEHU/HHrLWXQNpEmLnYJr635HTduyuAx19iuL482f7s3uEGqmKJrDxDkq4aw0pdHXwxrHS1vqfpA4+KfYqBet1rbQK0dep4gUUwHpPUN7DZriCbQGEVYqGD1DeH2G9ufmAcgRdd8bBtt8WEPFHQuK3vj5AeXzCYO1U42P3stasVeUda+OM2ytuUTn8qWpkbSwtvjooQOzoWFC6ZNkEHXl5cpdrqlrs8okPAaEEv/uGFUMBIfqAkQ2SWJ3u8OwVcTRuD8WsPKjkpfJNJnRWCfylu2Czbz4ow9hBX4Dp9P4itPDUDCXsjNPxcDFYYyxeCPiCVIZdSIAQTXUewKVuh/E8QGO95ov42fdf2Vyv+id+z6nR2c1zSnUO0BdA3tbvfBr6OgYzjnGfs5pHY8/aqiFtCZecYVKC8ijam+s+fyJACt7R0PnXq9VchbepqpCoSVZNjxfqM3KKjnI6xJoTTcmJkrS4Lh6LUodgTZUty280VO+5iuxo/7xi/5WKpHrKfgSEsQ+K9APWinKeTbL2AFN1OuTW1/LUU6aluYUSlqMnLYdFADLq8QEj5UlP0UIJLXOgcrnkFpsUneEUcRc9LSrfzciPS0NEMiBBXzwFsr7StvXE5fVqtZpBfBTzyXtbgHGNn7czrzWZpWmjDE38FNCtNzeKAlamGRtFsn+yeeSn1pubXN6rKyn3+ykv9TZ6urrKa9Bw1vPcfgKZYt0+igUFSAUHlq8Wq8UqT7Qn7rT7s5fgy7R7p0U7G8qT6v5/hw8KY/zFy2C1yTOYu3Ace38/qUb4jt3fFiBtEePxuNOEX6Lte7n+kTDKyt8W8KCj0Tspzf22L6BFXWPMcvkufwV4N5B+eScU5LlNQuXSLhdpDE7rqsLAZ89nUyZCOKl48+n2DgrYjX+bztfiI8AZt/hzFJJ9/xvbLXaM
+sidebar_class_name: "post api-method"
+info_path: API/product/the-furniture-bros-product-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload a Product"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/products/upload"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you to upload a product.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"An form-data containing the new details.\n","content":{"multipart/form-data":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"The name of the product.","example":"sample item"},"image":{"type":"string","format":"binary","description":"The filename of the product's image."},"price":{"type":"number","format":"float","description":"The price of the product.","example":50},"description":{"type":"string","description":"The description of the product.","example":"sample description"},"soldCount":{"type":"integer","description":"The total number of units sold.","example":35}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns the status of the operation.","content":{"application/json":{"schema":{"type":"object","properties":{"msg":{"type":"string","description":"The status of the operation."}},"example":{"msg":"product saved succesfully"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

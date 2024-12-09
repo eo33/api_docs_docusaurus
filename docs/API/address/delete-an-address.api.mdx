@@ -1,0 +1,71 @@
+---
+id: delete-an-address
+title: "Delete an Address"
+description: "This endpoint allows you to delete an address."
+sidebar_label: "Delete an Address"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVttu2zgQ/RViXgoEWluxLF/0libZhdHubtAk3QfXSClyZLORSZWkkhqG/n0xkizbcbqX1i+WNJwzwzlnhtyCRCesKrwyGhK4WynHUMvCKO0Zz3Pz7NjGlMwbJjFHj4xrxqW06FwPAvB86SCZw+UKxaMpPSwCcChKq/wGkvkWLm5m75AeF9UiAItfS3T+rZEbSLb1q7IoIfG2xACE0R61JxMvilwJTnn1vzhKbgtOrHDN6clvCoQETPoFhYfgAGgObXYzSbkU1hRovUJXg3amPYbzVuklBCeVwN0+2eyKmYz5FbLSoaVapNiWQ/bYJ33vsLZ+/u36ji3R7xzRfd4X0xuWG/PIuK/X5sp5Qu2WBoxryZR/Q/F6nzRUVRUAfuPrIscXycNoPEyjaDiWIpLTaBSmQxENJI/IqaJyuMJo12x6EIb0d7y921IIdC4rc7Zb3GMf0JdWu26nb1xXAqUzY9c1HUT7DxN1zMeD+g9M3Gv1tUSmJGqvMoWWZcbu2dhlaFEYK3tQBUDffxa3BurIOUDj1vLNCdj7l3Qy7pwRinuU7Fn51QFwAMrj2v17eVqw/yfWVqm5ES1bVQBrrvQBSmpMjlyfwMy0JCbRMUUg6oD+RhSEs+/+KvhZAvdQtWwfHp4O0JT2uER7AvcRrVNGs0fcvATai+C4deo0YRTHIynHPA5xKNN4PJoMUhzEAnaKoRUxD7PJNEPkYiyFkNP0XEo4ksL8gBmIJhF7h9qzWx+w243UuGF/3P7FBmEYBuyidN7yXHHYkZDx3GHQZTRKs3goptPxIJoMx9NJxKfj8yFUwWGMScguTZ4r7eoov2OemtJqZB9nlyz6TqBmonZxZCSm6SibDCaSx1EYp1xOx0Azua56HFUNB8NXpwUiW6NzfElzr7PUEohfc3DfdSA1ol8ZSqsZoSR77leQQL/dcr8zOLRPaJualzaHBFbeFy7p9/0Ks9Jq5UuLqTWuJ8z6RCo31shS0AtrkOrCHgNRo+Qr43wSh2F42thk7rwXAdCM+7A/xq5fH9BtK1QB0OQ8LVB90GYqR0ajlKt26v5ZoL64mTFXoFBZO1ZdJ/OLVuYXN7O60c/OqPN/3dWBvbXGnZ3V57LylBSc2juQXazbo1gQwFPTYJDAeS/shbSJwji/5vUM0XxNwFfdbaDFe1m57f6Q+IFrRTMCPH7z/SInPdNYJ962rVi6c76OW8tlEQDxSLbtNuUO721eVfT5a4m2voME8MSt4inVZr6oAlghl9T68y080jUFLpukf7mjDGh5XtZT/+UpR0JqPC6EwML/49rFgeivrt9f311DAGl7CVobSV6WP9NFhj9DAhCAKRo66JZE37aQc70s+ZLWNqj0+xsuuVNG
+sidebar_class_name: "delete api-method"
+info_path: API/address/the-furniture-bros-address-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an Address"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/address/delete"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you to delete an address.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["addressId"],"properties":{"addressId":{"type":"string","description":"The address ID of the user to be deleted. \nUse the `GET get addresses` endpoint to look at the list of addresses, and it's ID.\n"}}},"example":{"addressId":"674b3347dc3d9360b4c32da3"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns the user's address information.","content":{"application/json":{"schema":{"type":"object","properties":{"_id":{"type":"string","description":"Unique identifier for the user address record."},"user":{"type":"string","description":"Unique identifier for the user."},"addresses":{"type":"array","description":"List of addresses associated with the user.","items":{"type":"object","properties":{"address":{"type":"string","description":"The address of the location."},"main":{"type":"boolean","description":"Indicates if this address is the main address."},"_id":{"type":"string","description":"Unique identifier for the address."}}}},"__v":{"type":"integer","description":"Version key for the address record."}},"example":{"_id":"6556dd7a50e4db57682be25c","user":"6555a0f89feeac7dccd9b1dd","addresses":[{"address":"383 Kent St, Sydney NSW 2000, Australia","main":false,"_id":"656bf54c99723847983a9714"},{"address":"80 Collins St, Melbourne VIC 3000, Australia","main":true,"_id":"656d3c9b6f828da5305bad97"}],"__v":53}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

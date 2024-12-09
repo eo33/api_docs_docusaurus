@@ -1,0 +1,71 @@
+---
+id: add-an-address
+title: "Add an Address"
+description: "This endpoint allows you to add an address for the user."
+sidebar_label: "Add an Address"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SsCj4WWeO0KDL6lxQYUHdpg6bBDkIMiM7FaWVJFuVlg+L8PtF0nbbrTfJFkfujx8YkNFEg6mpCMd5DDQ2lIoCuCNy4JZa3fkdj7WiQvVFEI5XiJSCQ2PopUoqgJ4wQkJLUlyJdwXaJ+8nWClQRCXUeT9pAvG5jNb26Rt6t2JSHic42Urnyxh7zpjiZiAXmKNUrQ3iV0iU0qBGu0YoTTR2KYDZAusVK8S/uAkINfP6JOII8SLWGAykhC9AFjMkhdysFwiKcUjduCPOEDx4L9Zqx3oGMi7nBn97zFYvTbGWvFGgWhRZ3YQF1gpczI3gTatpWAf1QVLL6BBBdfL8QtuiQWSYrFvnC4F3eL3+I8yzIpZjWlqKxRnKHleil4R31d51nGy9saFrXWSLSprXh1ngguzMcCoygViTWiEzqiYrg0+ts9N/aoFQn/pGmwynzchJHEsS4Ykg1gv3yID1FUSKS2KI4sE2glXH4UQP8MaCVUmEpfQA7BE+shqFRCDtOBX16BhRlfMFKnyzpayKFMKVA+naYSN3V0JtUR19HTRPvqRBbz6Ita80H0maCV7xNZr5UtPaX8MsuykxQ/2DxGrySwtH8eHsW3j6QxENxKMG7jT5npnu/GWBTcNGVcr7z7gG42vxEUUJvN8JYOL3g2CHc2v+lUfnbG6vj+yoK4ip7Ozro3blLX1VP7mOT1rsWbu0AC892j/DzJJhkXwS2qVKclpypOPOtnzJDsPWnNQYv/Nal6tR6JuZV985pBLofRIXnHA4Q7yYamWSvCX9G2Lf9+rjF2M03Ci4pGrZmf5aqVUKIqMHYKe+KxB9c99k8PfD2725phnIw3llIfMdMaQzryPYa8OtL6/H7xABLWwzCtfMHeUe14IKod5AASfOhbwdOW/zVgldvWasu+/c38/QWxAhhx
+sidebar_class_name: "post api-method"
+info_path: API/address/the-furniture-bros-address-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add an Address"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/address/add"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you to add an address for the user.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["address"],"properties":{"address":{"type":"string","description":"The address of the user to add. Newly added address will be selected as the main address."}}},"example":{"address":"383 Kent St, Sydney NSW 2000, Australia"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. The order has been created successfully.","content":{"text/plain":{"schema":{"type":"string","example":"success"}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

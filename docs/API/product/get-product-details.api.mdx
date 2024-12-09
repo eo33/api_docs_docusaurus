@@ -1,0 +1,71 @@
+---
+id: get-product-details
+title: "Get Product Details"
+description: "This endpoint allows you get the details of a product."
+sidebar_label: "Get Product Details"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVlFv2zYQ/ivEvWwLBFtu62bRW7Z1QYEBC9r0KTBSWjpZ7CRS4R3tGob+e3GU5NixWwTow/wSh+R9/O7u43feQYGUe9OycRYyuKsMKbRF64xlpevabUhtXVArZMUVqgJZm5qUK5VWrXdFyHkCCbBeEWT3cNsvwSKBVnvdIKOXjR1Y3SBkUJoa49cEjNzYaq4gAY+PwXgsIGMfMAHKK2w0ZDvgbStxxN7YFSTQGGua0EA265IT9jhyUqbRK1TjbYqdCoQT9Ykw5vH55t2dGsiq2hB/fkqbnVob3Ej6IxwpbQsJNP4ZMk2gWwh/ap0lJKH8Kk3lzzG5jyHPkagMtRoPT9QH5OAtRUrGls43Wo5LefkpGUggd5bRssDqtq1NHs9Nv5Bg707L5ZZfMAa23rXo2fTMHkxxrqanZQzWPAZUpkDLpjToVen8IacJdMnQ05fgxSYcZxURYjFfBrHv5THML9R3JMK13uSHcDY0S/SQQF9a0V/tNJ/Fj7HnOB4dfQnTg5VzeOTq4k8X+m4OaMYyriLTUzh2rGvVpyJ4wRomJSgR7uFh/UKgNXo6w0kd7hmbe9SEpDYVWlzjUdeVIdW4QhQhl3cJ4FfdtDXuxQVv5/O5npVvrkpEnV8WeV5cLWcoD36wgKV3G6tYL2ssog/0GoDZZZrOZunvr9/OX11ONrhsYd/R1+nzhFisypDS6gAPjqp7lQ7VSTv5JPDm7MNEVA0Syas+2Im1nZ8LoO8GdAk0yJWTOqwwPj+xtwymo49MBwOd7kY5d8IZ/Xr0yeBryKBibimbTrnCMnhrOHhcekeT3DUnvR18TNrXI0GXPAeqXa7ryhFn8zRNTyD+ke199ELMuXSnqcf5IMyVGJI2g3X926K9vn2vqMXclIM50d4yRp+9vn0fJ8fFhSju7zEv9Yd3dHERx4hh0RKc7u9Bxrs+Ht0FCQwKFiFN0kka7cARNzq+2kF7N8h7pL/6Vjyvxe7JbH9iHvavkfErT9taGyt0Ykd2gybuYdREJDBSyfYDcpGA9EtO7nZLTfjJ110ny48B/Ray+0UCa+1NFL5IpzAUHxVkpa4Jf5DXrx+Gefub+p+G5ndKNCxqu5WO6jrIf5DAf7g9/PHQLboEKtQF+ph5v32d59jyQeDJqBRl71/ozbs76LpvLRUdmg==
+sidebar_class_name: "get api-method"
+info_path: API/product/the-furniture-bros-product-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Product Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/products/details/{filename}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you get the details of a product.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filename","in":"path","required":true,"schema":{"type":"string","minimum":1},"description":"The product image filename to use. Use the `GET Product list` endpoint to view all products and their image filenames."}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns the information of the product","content":{"application/json":{"schema":{"type":"object","properties":{"_id":{"type":"string","description":"The unique identifier for the product."},"name":{"type":"string","description":"The name of the product."},"image":{"type":"string","description":"The filename of the product's image."},"price":{"type":"number","format":"float","description":"The price of the product."},"description":{"type":"string","description":"The description of the product."},"soldCount":{"type":"integer","description":"The total number of units sold."},"__v":{"type":"integer","description":"The version of the product. The version increases whenever the product is modified."}},"example":{"_id":"6555a1f49feeac7dccd9b1ee","name":"brown tablede","image":"1700110836527.webp","price":30,"description":"this is a brown table","soldCount":90,"__v":0}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

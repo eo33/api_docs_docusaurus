@@ -1,0 +1,77 @@
+---
+id: edit-orders
+title: "Edit Orders"
+description: "This endpoint allows users to update the status of one or more orders. Valid status values include:"
+sidebar_label: "Edit Orders"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tz2zYQ/iuYPbUeWJZlSa55c9J0xtNO44mdXmRNDAFLESkJ0HhYcTT6750FKYuS7MRpcuihPlgSufvt69vFYgkKvXS6DtoayOC60J6hUbXVJjBRlnbhWfToPAuWxVqJgCwUyHwQIXpmc2YNMutYZR19KnS+x/4SpVZrmXtRRvRMG1lGhdmNYeyQ3dZolDbz24xdF60iK4RnxgY2QzRMYanv0aHqtRrtg4ctFU3AzBe6rtCEtai0VV1iQLUrm2sjSv0ZFRNGbZm4Me9TmFX0gdXO3mvVRHqblC/UbVKhJwYX7LYJ7pbl1jEUsmhs9G4McAhi7iGbwNuUDphy8Cij0+EBsskSzi8vfkf6CkJV2sB0NeXg8C6iD6+seoBsmX5qhwqy4CJykNYENIFeiboutRRUsaOPnsq2BC8LrAR9Cw81QgZ29hFlAA61szW6oNHTWx2w8h0x4Zx4AL7DgnNWah9ScVMEbKFDQaFrl4JvYkffA76H+IzhNokdQR+cNvM92++NvovItEITdK7RpQyHdRF7sOLQ2P861nVbrJaIO0Ac0MSKytByMek3HAPKeMshmK5WvFOQyWMwj55MV7siTVqmHPCTIJxO8iedbMD4dDgbjvNjJU/U2cm4PxvKkwHiYIOdbZxa8X1V8cu2qsKu6iaIFfnYeOlra3xTlkG/Tx/babuKUqL3eSzZWrjH3mGIzviUwGYOqCfYoTAIXSZifCtj11R8IaE+6B9EJppu34NE+mxRWFaXQqLaQf/WhkvyNNK2iPrCnNTOqijD90TTQux4sOJwF4UJaYI9gmsTcI5uD/3PWM3QUTTR6JAOiQ5008GFrmvy7KuuXrWSjMTYT9ib9zi7gXc4j6VwN/BzwvtONlB+d0NOzfLSSfM6OocmdI7F7ewJpRz6FwD92vY6azWeIKx0SN13/mSdc+sqEWhoiICHQVe4PxV1hT6IqmaLAjsxs4XwrAVvkvrh/gXVvjABnRElu0fntTVUq1xjqdY5fJyAk7ZrvzS5mm6E8emgP+qLwanCfKgGJ3kuZ6Pj8XjTC5MO3WE8Go3EcT48yxGFPFVSqrPZMRLghrfDLu3WBAL+ZZ/yNHR3LA1OT7csDfrHW5ZO/oUl7AOtAc9Nbg7DJ0c1IqvQezFH1nmTyjd6SsE/q7DiUGEoLLlYW5+miwgFZHDUzPkjWQgzx8PWRVpqHNU81SK6EjIoQqh9dnQUCsyjMzpEhzNnfU/aao84l01StTWsQUqp3gYqrRRlYX3IRv1+fw/iD3r9qD3lQKfLu80m9ea/c/hy0Ca3+wVJG3euS2R0YArdHrFvazTnlxfM1yh13h6em2nQbJbs/PIiDZuDA1p1flunnL1y1h8c0MkRdKD4Yf/9GmNt6WrLEnBo+xkyOO71e32iFPGiEun8NqIi3DdKhxZptzrLzQrw/73ix9wrmkkc8FM4qkuhTdpfqGGWba+2uynVYrtbpxyojUhiuZwJj+9duVrR47tI7M4mUw73wmkxS6OaCFugUDSNJ0v4m+4r8Lqp5+E1+UHiZUw7ze56R63SaJxLiXX4ouy0M3cu315dA4dZewmqrCIdJxbA0/8MgIOtG4bSLYmeLaEUZh7FnGQbTPr7B/35Gs8=
+sidebar_class_name: "post api-method"
+info_path: API/orders/the-furniture-bros-orders-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Edit Orders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/orders/change-status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows users to update the status of one or more orders. Valid status values include:
+  - `pending`: The order has not been delivered.
+  - `delivery`: The order is in shipment.
+  - `completed`: The order is finalized and delivered.
+
+Users must provide the `orderId` and the new `status` for each order.
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"array","description":"A list of orders with their new statuses.","items":{"type":"object","properties":{"orderId":{"type":"string","description":"Unique identifier for the order."},"status":{"type":"string","description":"The new status for the order.","enum":["pending","delivery","completed"]}},"required":["orderId","status"]}}},"required":["items"],"example":{"items":[{"orderId":"674b46f1dc3d9360b4c32ee2","status":"delivery"},{"orderId":"674b46a8dc3d9360b4c32ede","status":"completed"}]}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns the updated orders with their details.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"Unique identifier for the order."},"user":{"type":"string","description":"Unique identifier for the user who placed the order."},"items":{"type":"array","description":"A list of items in the order.","items":{"type":"object","properties":{"product":{"type":"string","description":"Unique identifier for the product in the order."},"quantity":{"type":"integer","description":"Number of units of the product."},"shipping":{"type":"string","description":"Shipping type (e.g., \"Regular\")."},"_id":{"type":"string","description":"Unique identifier for the item in the order."}}}},"status":{"type":"string","description":"Current status of the order."},"address":{"type":"string","description":"Delivery address for the order."},"createdAt":{"type":"string","format":"date-time","description":"Timestamp when the order was created."},"__v":{"type":"integer","description":"Internal versioning field."}}}},"example":[{"_id":"674b46a8dc3d9360b4c32ede","user":"672050a27def4d23ffcb5166","items":[{"product":"6555a1f49feeac7dccd9b1ee","quantity":4,"shipping":"Regular","_id":"674b46a8dc3d9360b4c32edf"},{"product":"6555a2779feeac7dccd9b201","quantity":3,"shipping":"Regular","_id":"674b46a8dc3d9360b4c32ee0"}],"status":"completed"}]}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

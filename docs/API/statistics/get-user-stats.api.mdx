@@ -1,0 +1,67 @@
+---
+id: get-user-stats
+title: "Get User Stats"
+description: "This endpoint provides a summary of key metrics for the users shown in the admin dashboard, including:"
+sidebar_label: "Get User Stats"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVcGO2zYQ/RViTu1CtZ1FFmh1c9s0WDRAjezuaeMDTY0tZilS4QzdGIb+PRjKkr1WivYDerIs8j3NPL43PEKFZKJt2QYPJTzWlhT6qg3Ws2pj2NsKSWlFqWl0PKiwVS94UA1ytIbUNkTFNapEGElRHf72yvr8SleN9arSVG+CjlWhrDcuVdbvyk/+J/UYWDsVYiVA7SvB2KiINSdCUj+06GVzoSp0do/xUORtJjStQ8bqx9mZpv98Zsn/2xiqZJhmn/w7bepTuacKcj+MX1k5vUFXKBOS555dK2f9S25rmyLXGFWFrK0TKiiA9Y6gfIYH1myJrSFYF0BoUrR8gPL5CMvV/Z8oj5AVgHW3LiAitcETEpRHuF0s5Oe18g/JGCTaJqeGzTP1ETlFf6X/KGkWq69iBgWY4Bk9C7VuW2eNFur5ZxL+I5CpsdHyxIcWoQQdoz5AAZaxoYv3YfMZDUMBbQwtRrZ91aLYxS7iaP0Oiqs2lmr8v8de4NEkY7kz6KTc5C8JrWfcYZwwPtaofGpQDnCvXULRYEon5/ZfyovodK7t6eOHXFl/vlgp67chNlk0pTch8eQrnRzkl2QjVnK+WZGhkVMFa9mEX7WYNNuhlw2WbjD7iCjf/jKUDaelrhgBq97+E9Dt7RVofgrKJfj3PjJYTeBvJvAhXpf434aQTfF31/gxkJcEF7E8Y+9+HrH9ygQw5PaMOUPGtW7dichvv5siRNUgkd6huljJDrn7HoD+EdAV0CDXoYISdpjzoLmGEuZiCZqPMQQZAHEvDcmBp+ighJq5pXI+5xq3KXrLKeImBpqZ0ExcuepbE+P1TFmZ10QuGO3qQFzeLRaLCcUHWR7R6wLEzdN283zfWodKpoW2nrLJ/2rRL1f3ilo0dnuaHOfpfp52arm6JwngzY3k8o+hNfVrDHRzI2OILYv1Ybp+yTN88eHVF6EA0bGv9c1sMVvIwbWBuNF5iHndCPd7ZPVEGDMjXYtxPI/C/y+0f7vQ+nEp6HnrtPUieHbe8eT3Z6BB5NHx6wLEirJ4PG404VN0XSevvyQZJeXzuoC9jlZv8hhcdwXUqCuMOSIvcj/C0hhsJVd5qsuFdH1riY/HDL5/9whd9w2PSwlX
+sidebar_class_name: "get api-method"
+info_path: API/statistics/the-furniture-bros-statistics-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get User Stats"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/stats/dashboard"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint provides a summary of key metrics for the users shown in the admin dashboard, including:
+- Total orders and their statuses (pending, delivery, and completed).
+- Total users and total products.
+Each metric includes a text label, count, and a link for further details.
+
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns a summary of dashboard statistics.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"text":{"type":"string","description":"A descriptive label for the statistic."},"count":{"type":"integer","description":"The numeric value of the statistic."},"link":{"type":"string","description":"A relative URL for detailed information about the statistic."}},"required":["text","count","link"]}},"example":[{"text":"All orders","count":49,"link":"orders"},{"text":"Pending orders","count":22,"link":"orders/pending"},{"text":"Delivered orders","count":12,"link":"orders/delivery"},{"text":"Completed orders","count":15,"link":"orders/completed"},{"text":"Total users","count":58,"link":"users"},{"text":"Total products","count":8,"link":"products"}]}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

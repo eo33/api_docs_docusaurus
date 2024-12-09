@@ -1,0 +1,74 @@
+---
+id: get-product-stats
+title: "Get Product Stats"
+description: "This endpoint retrieves product statistics for the specified page, including:"
+sidebar_label: "Get Product Stats"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVlFv2zgM/isCn9rClzht06J+64a7objDrmu7py5AFJlOtNmSK9HdgsD//UDZcZ04Q4cD+rS82LGoj/o+kiI3kKJXTpekrYEEHlbaCzRpabUh4ZCcxmf0onQ2rRQJT5K0J628yKwTtELhS1Q605iKUi4xEtqovEq1WSZfzB/iwZLMt9u98DZPxdGcH+9tZWh+PGKrdw7lt9R+N8JmnS/rUnReLNbBa+XF0bxEw8jzSMxTzPUzujW/K1uUORKm82PxXdNKKMb2QppUUDjAUyUNadLoR18MREBy6SF5hPuOD8wi8Kgqp2kNyeMGrm9v/kZ+BZkW2sCsnkVQSicLJHQ+2BhZICTAxCECbcI7rSACh0+VdphCQq7CaCAzBrWEqYoFuqBlKZfaSGIdB2KPIAKvVlhISDZA65K9akO4RAcRFNrooiogmdR8SIe+tMajZ+PTOObHrv/7Sin0PqtysTUeiTukyhkvZO8oufbUj8nukZQ1hIYYX5ZlrpVk/PFXz042wxNL5+SahSIsfO+7XXxFRRBB6WyJjsPEq63TnqEnp80S9uX8bPRThUKnaIhT0XXJ2UKMoI7aYL2G9VEWyIz3d3cpezACe+ENOdfG1maiMrrN/QDVZOch/rswO1WxXw2joVxNcbyuq/pFGh87Ai10e4hAItTVp6as1r+sSVuH615OeaHN0EFdM0BT4m/BaIv9dpSGHuoQ+/aqegtSHfjbsTrgIvz6N95jV7lt0fWrp0v/GW/CH5LxwmXalTtcTKdTOcnOrzJEqS5TpdKrxQRxi5fAwnFZkFzkmO7iJ1dxv8L6OdQKejHQZHK6H5nW9HJgehbXUb/SWsPJ2cDy8pxl2aOVZfEUL+LFVMYLpWJ5dTY579G6w2WVS9cQ26V1NnmF1mRI6yesTgeWpwdJnQ8RJ3Vdz0K4zw/2FURRoPfc2norIQ+nhzb4n26oIyiQVjaFBJYYqoM7awJjvv/8uJX1gZUab7iZ1iwYuudtc65cDgmsiEqfjMe0wqxyRlPlcOGsHylbDHL/tgHV1ogGCTiCu0C5VTJfWU/JNI7jAcQ/vNztnvFUkNkh8TBoZTpHwU1UauNDx/m3RHN9e7MdqpqG+jJrvYwr4vr2xnNxnpzwMPHXlpp456w/OeHuQJq4smC43sfZerzf8QgRsI7NWSejeBRzCEvrqZCht7cJ+wFJtKIFUL+vx+ZlSPh9hsvmgiX8QeMyl9qwdiGJNm0SP4JvxeqnMUSQhFFyFgEnGNttNgvp8bPL65o/P1Wh6B9nETxLp8MuzvVU+3AXQpLJ3O/Pm/0gHN219/Sx+D9T6EFu2/HO8HD3LPOK/0EE33h+bqbjelZHsEKZogsHbpaulcKSepsGYyRXUHcPfPjzAer6PwnPdNY=
+sidebar_class_name: "get api-method"
+info_path: API/statistics/the-furniture-bros-statistics-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Product Stats"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/stats/productTable/{page}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint retrieves product statistics for the specified page, including:
+- Total products sold (`soldCount`).
+- Breakdown of product orders by status (`pending`, `delivery`, `completed`) with counts and total quantities.
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"path","required":true,"description":"The page number for paginated product statistics.","schema":{"type":"integer","minimum":1}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns a paginated list of product statistics.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"product":{"type":"string","description":"Unique identifier for the product."},"name":{"type":"string","description":"Name of the product."},"soldCount":{"type":"integer","description":"Total number of units sold."},"counts":{"type":"object","description":"Breakdown of orders by status.","properties":{"pending":{"type":"object","properties":{"count":{"type":"integer","description":"Number of pending orders."},"totalQuantity":{"type":"integer","description":"Total quantity of products in pending orders."}}},"delivery":{"type":"object","properties":{"count":{"type":"integer","description":"Number of delivery orders."},"totalQuantity":{"type":"integer","description":"Total quantity of products in delivery orders."}}},"completed":{"type":"object","properties":{"count":{"type":"integer","description":"Number of completed orders."},"totalQuantity":{"type":"integer","description":"Total quantity of products in completed orders."}}}}}},"required":["product","name","soldCount","counts"]}},"example":[{"product":"6555a1f49feeac7dccd9b1ee","name":"brown tablede","soldCount":90,"counts":{"delivery":{"count":6,"totalQuantity":12},"completed":{"count":7,"totalQuantity":30},"pending":{"count":13,"totalQuantity":74}}},{"product":"655ff05e60b5a0bcc0a9314e","name":"Regular table","soldCount":31,"counts":{"delivery":{"count":1,"totalQuantity":1},"completed":{"count":2,"totalQuantity":2},"pending":{"count":4,"totalQuantity":11}}}]}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

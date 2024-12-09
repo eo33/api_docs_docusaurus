@@ -1,0 +1,72 @@
+---
+id: get-order-stats
+title: "Get Order Stats"
+description: "This endpoint retrieves order statistics for the specified page."
+sidebar_label: "Get Order Stats"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttuGzcQ/RVinlpjYa1udr1PVZo0CFokbpz0xRUCipyVGHPJNTkrxxD234vhSo5uiVLUetFKO5xz5sKZswKNUQVTk/EOCviwMFGg07U3jkRACgaXGIUPGoOIJMlEMiqK0gdBCxSxRmVKg1rUco7n/zjIgOQ8QnELN0/mMM0gomqCoUcoblcwuX7zB/IjSF0ZB9N2mkEtg6yQMMRk42SFUAD7hQyMS8+0gAwC3jcmoIaCQoPZQQyYyAjXVDMMiWot58ZJNjiHDKJaYCWhWAE91oxhHOEcA2SAX2RVW4Si3zKlgLH2LmJk40Ge89cu2kRYE0n4sstRZP/KO0JHbCzr2hqVkHufI59YHcL72WdUBBnUwdcYyHR45Enad8nrUa57YbP1JuYdOk8xja7aDPy+QxmCfDxw9+c6KmntlitDWMXTzD8ZvWUUKRg3P0D46Mx9g8JodMQtFJ6aKuHtMIeLy9FseDn7Rauhvhpe5LORGg7wcgBtBk3EcIzTHlzEIB4WXtRWKtS7QM9Kn/nssx/k41wOLjWWIz0YlqWajfsXF8weK2nsabhXbCak1gFj5MIcRypNiNQfDD8Nrn6d85Fz5Sto2/awdt+ve7IWxu3m6QfrXwevG0Wni3LdGQqNJI2Nz16KNZG9aozHY9kvR1clolSXWil9NesjcjW6oXMK8K2scFODoxCz4B+cIDmzqJPfOhi17bi7p0fyYdR3PQ/zVMv7RjpKw/TkXPhrbbrntasp6t0B0WYQF6auOeiTWbhZW4oKaeG1iGhREeqn7HO37OblPc4bKwNn5H9Wln0ftOfJeTHkq8BBkqQmnsb/rQkBHYnOfpPCI3g1Os0O2gzWd/Q/5G9zq78z/z5gJAziZcjECyvV3YP3WtxMxDgf9zMxaSIFaY1kfBVQEuoJnWbwUhKKhwVupVE8yCjWLnYpDHPx1i/FIB+MUv0+LX+g+/7GEI134g4fd8MT2qumQrfb3tzd3SeD0bF1e4MoKoyR9/vWm3NmND52IH7zQJtB17hQwBzTEGN5UUCPqx173dbrSWt7K9YTLSsHDMuNPmmChQIWRHUsej1aYNkEZ6gJOAs+prn7jXHHCek8QZvtO7JeSbvwkYpxnueH85lfP52esjAq/WHYSciVxqJgMSKNiyn172p0k+s3G9nWCZOvjfdVsYnJ9ZvU72dnrKd+34QmXgQfz864aGSoa82D99t+Nog3O4iQwbLrDCigf56f52lI+kiVTBppLf5eI4mkgJLLuJ+N1Vep9UzStetmwi/Uq600LumLkPZz1x23aXYwk7WQykBaCxkUSahOM+Dasd1qNZMRPwbbtvz3fYOBFe80g6UMhldDaiNtYloTUJTSxn01ux3hT+/XuvdncVrjHo1ks/kd7/2ltA3/ggzuWIt3SrudthksUGrWVLer9auJUljT1qEDXcut+HSdXr/6AG37L0sfO8I=
+sidebar_class_name: "get api-method"
+info_path: API/statistics/the-furniture-bros-statistics-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Order Stats"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/stats/orders/all/{page}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint retrieves order statistics for the specified page.
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"path","required":true,"description":"The page number for pagination.","schema":{"type":"integer","example":1}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"A list of orders.","content":{"application/json":{"schema":{"type":"object","properties":{"totalOrders":{"type":"integer","description":"Total number of orders.","example":49},"orders":{"type":"array","description":"List of all orders.","items":{"type":"object","properties":{"_id":{"type":"string","description":"Unique identifier for the order.","example":"674b37b8dc3d9360b4c32e72"},"user":{"type":"object","description":"User who placed the order.","properties":{"_id":{"type":"string","description":"Unique identifier for the user.","example":"672050a27def4d23ffcb5166"},"email":{"type":"string","description":"Email address of the user.","example":"first123_29@gmail.com"}}},"items":{"type":"array","description":"List of items in the order.","items":{"type":"object","properties":{"product":{"type":"object","description":"Product details.","properties":{"_id":{"type":"string","description":"Unique identifier for the product.","example":"6555a1f49feeac7dccd9b1ee"},"name":{"type":"string","description":"Name of the product.","example":"brown tablede"},"price":{"type":"number","description":"Price of the product.","example":30}}},"quantity":{"type":"integer","description":"Quantity of the product ordered.","example":4},"shipping":{"type":"string","description":"Shipping method selected for the item.","example":"Regular"},"_id":{"type":"string","description":"Unique identifier for the item in the order.","example":"674b37b8dc3d9360b4c32e73"}}}},"status":{"type":"string","description":"Current status of the order.","example":"pending"},"address":{"type":"string","description":"Shipping address for the order.","example":"Tester Dr, Blackwood SA 5051, Australia"},"createdAt":{"type":"string","description":"Date when the order was created.","example":"30 Nov 2024"},"__v":{"type":"integer","description":"Version key for the order document.","example":0}}}}}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

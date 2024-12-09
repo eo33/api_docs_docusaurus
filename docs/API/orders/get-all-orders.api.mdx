@@ -1,0 +1,69 @@
+---
+id: get-all-orders
+title: "Get all Orders"
+description: "This endpoint allows you to get the orders of the user. Order can either be:"
+sidebar_label: "Get all Orders"
+hide_title: true
+hide_table_of_contents: true
+api: eJztlt1v2zYQwP+Vw720MzRZ/k78lm1tEWxIsiZ9SoyVok4SO4lUSCppauh/H0jJsmJnyLAB28uebPGOP/I+eVtMyHAtKiuUxDXe5MIAyaRSQlpgRaEeDTypGqyCjCzYnEDphLQBlfqv2pAO4dKtAWcSSNicNMS0vpPfw+eKZCJk9nndqQgDQvqNvQiMZZZCOLeQMwNSWYiJJCRUiAfSlITgUd3300usXjaACQPGiqJwSiYXVUnOJJn4E7gqq4IsJaFn959DeL8ITEIqJCvEt/Y2d/JGAc+ZzMif7w6tvUuYbP0TOMd42Wh0dXl9A+8SYVu0GY16F4d3EgO0LDO4vsVWjJsADfFaC/uE69stnl2d/0zu76bZBKjJVEoaMrje4jSK3M/zIF7XnJMxaV3ATjmEj2RrLY2L6TB0b0wXzxAD5EpaktYRWVUVgjNHHH8xDrtFw3MqmftnnyrCNTKt2RMGKCyVZrCu4i/ELQZYaVWRtqK9rD/oPBkoGquFzDA4MOCTFPc1gUhIWpEK0pAqvc+9EBuPTmpu/xmug+zSaE8XJcvodfJ7URBIVtLOpR3wjQFP8Cwnfx11cUzp7BR8uF3WZUz6aPuVUzvYD2+FhEQVBdPmOw+7r5m0Pq16npCWsheAv3aqh8wjV7nSqpxFr5p43WmCU4O3FGZhAHf4kbK6YPoO2zu2tfQ67cdaa1fR+9rr77Vndz1mx+aamKXkzL6O/4lZGhAfmYFutyf51Yu6/AuebPtJGzdgxiguHAYehc39CVYzaRh36iE2TdMESF+Z6z2+/PuyweVqHs9W8UnCZ8npbBnFcz6b0mqKz8oBl4vFgk3S+WlKxPgq4Tw5jSdE2Oc1TlZRNJlEJ7PlYroKHymucJeoGGv1KMGyuKCEsM/AWTTMn/kw8LsQ4j56O8/jM6fjhXog74dZFMA0ms5x6MpJE/w9c9M0WtAyihcsijmP2OlsMj80d3WynK6ik+X8wNzu7q3Be3Mn0b9h78ZHe/5iFyeCkoxhGcFA4rNv8dIG86cbmgBLsrly3srIN2Zmc1zjuO3944zsb6wonD2kH9wb5BKv1gWuMbe2Muvx2OaU1loKW2uKtTIhV+ULbcjHRSgJLQldSJ+DCsVZkStj14soio4Qvzhxv3sToJCpOrbWTyqp67/u1WJCGl9LlxXJs6tzMBVxkXYvmOkbfvvCwtnVue8Yo9FNTvB+Zxb8oJUZjdxTaIV15YfH8h1jd9L1s5MwQOe/9o6TMAoj38SVsSXzj2iXdR/Ij1cd7NAJ2/1T/P9I9t+MZG1Pt/TVjquCCenC6PN42xXPbVvILna78tkE6PLaybbbmBn6pIumccv3NWk/wQX4wLTwrcbNcwHmxBLSvt5+d0MennFOlavRB1bUfso6HMVcUfT1/OHdDTbNH6r8Ais=
+sidebar_class_name: "get api-method"
+info_path: API/orders/the-furniture-bros-orders-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get all Orders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/orders/get_all"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you to get the orders of the user. Order can either be:
+- `pending`: Order is in the `pending` state. It has not been delivered. 
+- `delivery`: Order is in the `delivery` state. It is still in shipment and not completed.
+- `completed`: Order is completed an finalized. 
+
+To change the status of an order, use the **POST Edit Orders** endpoint.
+
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns all of the user's orders.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"orderId":{"type":"string","description":"Unique identifier for the order."},"productId":{"type":"string","description":"Unique identifier for the product in the order."},"image":{"type":"string","description":"File name of the product's image."},"name":{"type":"string","description":"Name of the product."},"price":{"type":"number","description":"Price of the product (in dollars)."},"quantity":{"type":"integer","description":"Quantity of the product in the order."},"shipping":{"type":"string","description":"Shipping type (e.g., \"Regular\")."},"status":{"type":"string","description":"Current status of the order (e.g., \"pending\")."},"createdAt":{"type":"string","description":"Date the order was created."},"orderNum":{"type":"integer","description":"Order number associated with the transaction."}}}},"example":[{"orderId":"674b37b8dc3d9360b4c32e72","productId":"6555a1f49feeac7dccd9b1ee","image":"1700110836527.webp","name":"brown tablede","price":30,"quantity":4,"shipping":"Regular","status":"pending","createdAt":"November 30, 2024","orderNum":1},{"orderId":"674b37b8dc3d9360b4c32e72","productId":"655ff05e60b5a0bcc0a9314e","image":"1700786270864.webp","name":"Regular table","price":100,"quantity":4,"shipping":"Regular","status":"pending","createdAt":"November 30, 2024","orderNum":1}]}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: register-an-account
+title: "Register an Account"
+description: "This endpoint allows you to register a user. Once registered, it will return an API key."
+sidebar_label: "Register an Account"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vu9P40YQ/VdW86lFJgn0OPX8qaG9XqGIcBB6J3FRNVmP4wV717ezJoQo/3s16ySEJK1OVetP8f54M/Pem3HmkBFrb+pgnIUUhoVhRTarnbFBYVm6KauZa1RwytPEcCCvUDVMvqMGVtN6lbJEmaCmpiyVp9B4q9Cq/tWZeqBZBxIIOGFI76DfhAJGCXj62hCHU5fNIJ1v5dG3yo3vSQelnQ1orLETFQpSNXqsKJBnSUl7wkAKbbaRnVWotWts6Hyx0MYxnjJIg28oAQEkGyQm1nVpNErM7j1L4DmwLqhC+RVmNUEKbR6vgO7AYkWQAFVoSkigRuap85nUVXtXkw+GWEDiwRcwDt7YCSQ7tJOSk8rlscrI7xcLi1WIPQi58xUGSNdJ7ELGHYVZ5ol5D/Y67W9KcHVa5c5HpA2aFwlgVhm7gTR2riS0ESrHpgyQ5lgybUPf1KRNbojVtKBQkF9nqQpkFWENB4/BPJKqvXk0JU2IY1gh6AmruqQXsuHeFVZl7kWgdunPzNHR8U8TWepoV23qlsLR8Q9vTt7CQh7RmmtnudXwuNfbdehNozUx543YvT3cUdfR+Cwe3G/fjX741z58bbDgHsh+m4DL4MJtJt2DTSjIBonc9pAsOG+eaUfe1zwvYwLNzovxB20G5vzs9vns6NKc8Zm9PtGnH8rro/zh+fPH3ydPF1w8/3FxXGq8/3j5+f3t8Lfeu8tDzf7djyu63+xlmEhVxIwTUhs7HTHbyb4L/LcXYvqBvMXyF6d59+oWPazObwaX6hON1VBqVd+dfxp+v81ZR10Qeqsq50nh2DVBJmBBnkTfxovxihBqTrtdudcT13Uzp7nLpBtP3UgkR80PpzQ+bN+lwIpC4cSXteMoOoYCUog43dWsgwSY/CN5GazzrYihoLzx1oTG09g7Xlr+dd1X3mWNlhfVIsEi2QYqncaycBzSk16vtwNxIdvr26MEpJrrl+H+/r/tzwSMzd0+BQ2r3JS0ajmOJh7UZEVYbqdM22S8HmF97XRjg2gfB+TBgTjh1xVv6tQ7PjiIny8TpAjY3Vf9tlHWsW5exYIERKE2y6NOr9OLo9dxqNBusHK98QFbIm5zPX8ZGv/rl7qdJIGeQrcu0cTxHj0xX/rwDsSH8Zu4dOIoAbGIbM3nY2S69eViIctfG/IzSO9GCTyiNzgWGu9GiwQKwox8tO4DzSCFn9vqDoeSgBwvG0lkZzyKR9sbfa2pDv94drTRTFeDmyEkMF7+56hcJnc8TqUUnEIKkICrW93Sebs2hxLtpMFJ9G7ElOcvdKMxvw==
+sidebar_class_name: "post api-method"
+info_path: API/account/the-furniture-bros-account-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Register an Account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/register"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you to register a user. Once registered, it will return an API key.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"An object containing the parameters to create and register an account.\n","required":true,"content":{"application/json":{"schema":{"type":"object","required":["name","email","password"],"properties":{"name":{"type":"string","description":"The name of the user.\n"},"email":{"type":"string","format":"email","description":"The email address of the user.\n"},"password":{"type":"string","description":"The password for the account.\n"},"admin":{"type":"boolean","default":false,"description":"Specifies whether the user has administrative privileges.\n"}},"example":{"name":"john doe","email":"john_doe12@gmail.com","password":"123456"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns an object containing the API key.","content":{"application/json":{"schema":{"type":"object","properties":{"token":{"type":"string","description":"The API key used to authenticate and authorize the account.\n"}},"example":{"token":"eyJhbGciOiJIUzI1NiIsInR5cBGlR1fkzXQKgxLshzVL2lcajQNXEUTH09N-csr98"}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

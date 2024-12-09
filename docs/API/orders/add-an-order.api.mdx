@@ -1,0 +1,74 @@
+---
+id: add-an-order
+title: "Add an Order"
+description: "This endpoint allows users to create a new order by providing the list of items they want to purchase along with the shipping address."
+sidebar_label: "Add an Order"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVsFu4zYQ/ZXBnNqAayubOEF18yYpELRojDjpxfGBEkcWtzSpkFSyhqF/X4wU2Urs7d6L+pDY5MzjcN6b4WxRUci9rqJ2FlN8KHUAsqpy2kaQxrjXAHUgHyA6yD3JSCDB0is4r8hDtoHKuxettF1BLAmMDhFcATrSOvDKBl6ljexe1T4vZSCQxtkVvOpYti6h1FXF/lIpTyGM4Ml+ghuZly0KrOsQQdvc1Ipah8o7VecRbq8FPNfSRh03AqRVe6i4qWjEMA8l9bhQaDIKQkW5LjS10YEio1/Ib/ZGzrcb7f1GTxYFRrkKmC7wjpcCLgUGymuv4wbTxRans9s/iL8um6VAT881hfjFqQ2m2/an9qQwjb4mgbmzkWzkLVlVRueSUz/+Gjj/Wwx5SWvJ3/gGmKLLvlIeUWDlXUU+agq826Z3YCa9lxsUH+icfqTD7fKo7eCWKA4Af3DuW+oHhiF6bVcHRz9a/VwTaEU2crY9RzEgb4SNwJ68AZy2kVbkD/D+qtdZB1JbHcMxtJ78nwf3sKmIEXZy6UnvlfULjVYjAU94T6vaSP+Ev46wacSAzsUuF4N7DIJYsvmbqH4e0fW/y/Dg7I6u/QFLgfRNritDA3UsBnzhxWRSFMmELpJsIpMszxP529npOQ3DT08nwzT2t8dGvEe6OP98KbPJ5URlp0TnZ+r8IptcvkdKjiMtB0nBmQsR7opC5wQzI+BKehOdhb9vr+AsmZwJmNYhemm0xIY/nIRQORs6NX5OEv73PpXzOs8phKI20BuP2jbQdaxSBsiI7Fs3UxB29mbDlTCo0Ejf4rgyUh+vzR2Xu9Tj3f31zT3MH6+ubuZz7EI+PxolEawpBLniHrTbaYU8OeYQfujQCFxTLJ3CFCsX2qKVscQUx+2Vw1gqxdIk/8L9i3VRe4MpljFWIR2PY0lF7a2OtafMuzDK3fpAorNOANpZ6JBaWbwHMi6XpnQhppMkSQ4g/uTtnfdSILe9+33DvPmPS1igtoU75LZ9dgttCFh8UtvubbqryE5nt/2L1T0V+9bQPUcwnd227fDkhEX+e88jfPEunJywoqOOrTgP93uM/qT5u5NQIAumi/F0lIwSvgJLbC3birByzbhTpUDaDusj59t9Pf0/XRyfLrpmMug1jejKavtWxwvs6rjr99zrucR4fbvNZKBHb5qGl59r8u0gIvBFei0zpn2xbASWJJkcrqd/eFbBq46VT/wUMs/S1O0c8XEm4brpPKZ5TlUc2A4jXg560Oxu/oACs7cJaO0UW3v5iqL9myIKdFUnMR6ReG2LRtpVLVds253Mn+8sB6gF
+sidebar_class_name: "post api-method"
+info_path: API/orders/the-furniture-bros-orders-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add an Order"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/orders/add"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows users to create a new order by providing the list of items they want to purchase along with the shipping address. 
+- Each item must include the product ID, quantity, and shipping type.
+- The address field specifies the delivery address for the order.
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"array","description":"A list of items to include in the order.","items":{"type":"object","properties":{"product":{"type":"string","description":"Unique identifier of the product."},"quantity":{"type":"integer","description":"Number of units of the product."},"shipping":{"type":"string","description":"Type of shipping for the product (e.g., \"Regular\")."}},"required":["product","quantity","shipping"]}},"address":{"type":"string","description":"Delivery address for the order."}},"required":["items","address"],"example":{"items":[{"product":"655ff05e60b5a0bcc0a9314e","quantity":15,"shipping":"Regular"},{"product":"656427ab575db1ee43d46b57","quantity":10,"shipping":"Regular"}],"address":"Post Office Pl, Carlton VIC 3053, Australia"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. The order has been created successfully.","content":{"text/plain":{"schema":{"type":"string","example":"ORDER SUCCESS"}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      

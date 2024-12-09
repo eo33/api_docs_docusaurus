@@ -1,0 +1,320 @@
+openapi: 3.0.0
+info:
+  description: This file contains the OpenAPI specifications for the Product APIs of **The Furniture Bros**.
+  title: The Furniture Bros Product OpenAPI Specifications
+  version: 1.0.0
+servers:
+  - url: https://thefurniturebros.com
+    description: Production server
+  - url: https://localhost:5000
+    description: Local server
+paths:
+  /products:
+    get:
+      summary: Get Product list
+      description: This endpoint allows you get the list of available products. It shows all available product.
+      tags:
+        - Product
+      responses:
+        "200":
+          description: Successful response. Returns a list of product.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    _id:
+                      type: string
+                      description: The unique identifier for the product.
+                    name:
+                      type: string
+                      description: The name of the product.
+                    image:
+                      type: string
+                      description: The filename of the product's image.
+                    price:
+                      type: number
+                      format: float
+                      description: The price of the product.
+                    description:
+                      type: string
+                      description: The description of the product.
+                    soldCount:
+                      type: integer
+                      description: The total number of units sold.
+                    __v:
+                      type: integer
+                      description: The version of the product. The version increases whenever the product is modified.
+                  example:
+                    _id: 6555a1f49feeac7dccd9b1ee
+                    name: brown tablede
+                    image: 1700110836527.webp
+                    price: 30
+                    description: this is a brown table
+                    soldCount: 90
+                    __v: 0
+        "400":
+          description: See message description.
+        "500":
+          description: see message description.
+  /products/{filename}:
+    get:
+      summary: Get a Product Image
+      description: This endpoint allows you get the image of the product. The image is in the .webp format.
+      tags:
+        - Product
+      parameters:
+        - name: filename
+          in: path
+          required: true
+          example: "1700110836527.webp"
+          schema:
+            type: string
+          description: The product image filename to use. Use the `GET Product list` endpoint to view all products and their image filenames.
+      responses:
+        "200":
+          description: Successful response. Returns the image of the product.
+          content:
+            image/webp:
+              schema:
+                type: string
+                format: binary
+        "400":
+          description: See message description.
+        "500":
+          description: see message description.
+    put:
+      summary: Edit a Product
+      description: This endpoint allows you to edit a product.
+      tags:
+        - Product
+      security:
+        - APIKey: [admin]
+      parameters:
+        - name: filename
+          in: path
+          required: true
+          example: "1700110836527.webp"
+          schema:
+            type: string
+          description: The product image filename to use. Use the `GET Product list` endpoint to view all products and their image filenames.
+      requestBody:
+        description: |
+          An form-data containing the new details.
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The new name of the product.
+                  example: "sample_item"
+                image:
+                  type: string
+                  format: binary
+                  description: The new filename of the product's image.
+                price:
+                  type: number
+                  format: float
+                  description: The new price of the product.
+                  example: 50
+                description:
+                  type: string
+                  description: The new description of the product.
+                  example: "sample description"
+                soldCount:
+                  type: integer
+                  description: The new total number of units sold.
+                  example: 35
+      responses:
+        "200":
+          description: Successful response. Returns the new information of the product.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  msg:
+                    type: string
+                    description: |
+                      The status of the operation.
+                  updatedProduct:
+                    type: object
+                    properties:
+                      _id:
+                        type: string
+                        description: The unique identifier for the product.
+                      name:
+                        type: string
+                        description: The name of the product.
+                      image:
+                        type: string
+                        description: The filename of the product's image.
+                      price:
+                        type: number
+                        format: float
+                        description: The price of the product.
+                      description:
+                        type: string
+                        description: The description of the product.
+                      soldCount:
+                        type: integer
+                        description: The total number of units sold.
+                      __v:
+                        type: integer
+                        description: The version of the product. The version increases whenever the product is modified.
+                example:
+                  msg: Product updated successfully
+                  updatedProduct:
+                    _id: 6555a1f49feeac7dccd9b1ee
+                    name: brown tablede
+                    image: 1700110836527.webp
+                    price: 30
+                    description: this is a brown table
+                    soldCount: 90
+                    __v: 0
+        "400":
+          description: See message description.
+        "500":
+          description: see message description.
+    delete:
+      summary: Delete a Product
+      description: This endpoint allows you get delete a product.
+      security:
+        - APIKey: [admin]
+      parameters:
+        - name: filename
+          in: path
+          required: true
+          example: "1701082686603.webp"
+          schema:
+            type: string
+          description: The product image filename to use. Use the `GET Product list` endpoint to view all products and their image filenames.
+      tags:
+        - Product
+      responses:
+        "200":
+          description: Successful response. Returns the status of the operation.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  msg:
+                    type: string
+                    description: The status of the operation.
+                example:
+                  msg: "Item deleted"
+        "400":
+          description: See message description.
+        "500":
+          description: see message description.
+  /products/details/{filename}:
+    get:
+      summary: Get Product Details
+      description: This endpoint allows you get the details of a product.
+      tags:
+        - Product
+      parameters:
+        - name: filename
+          in: path
+          required: true
+          schema:
+            type: string
+            minimum: 1
+          description: The product image filename to use. Use the `GET Product list` endpoint to view all products and their image filenames.
+      responses:
+        "200":
+          description: Successful response. Returns the information of the product
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  _id:
+                    type: string
+                    description: The unique identifier for the product.
+                  name:
+                    type: string
+                    description: The name of the product.
+                  image:
+                    type: string
+                    description: The filename of the product's image.
+                  price:
+                    type: number
+                    format: float
+                    description: The price of the product.
+                  description:
+                    type: string
+                    description: The description of the product.
+                  soldCount:
+                    type: integer
+                    description: The total number of units sold.
+                  __v:
+                    type: integer
+                    description: The version of the product. The version increases whenever the product is modified.
+                example:
+                  _id: 6555a1f49feeac7dccd9b1ee
+                  name: brown tablede
+                  image: 1700110836527.webp
+                  price: 30
+                  description: this is a brown table
+                  soldCount: 90
+                  __v: 0
+        "400":
+          description: See message description.
+        "500":
+          description: see message description.
+  /products/upload:
+    post:
+      summary: Upload a Product
+      description: This endpoint allows you to upload a product.
+      tags:
+        - Product
+      security:
+        - APIKey: [admin]
+      requestBody:
+        description: |
+          An form-data containing the new details.
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the product.
+                  example: "sample item"
+                image:
+                  type: string
+                  format: binary
+                  description: The filename of the product's image.
+                price:
+                  type: number
+                  format: float
+                  description: The price of the product.
+                  example: 50
+                description:
+                  type: string
+                  description: The description of the product.
+                  example: "sample description"
+                soldCount:
+                  type: integer
+                  description: The total number of units sold.
+                  example: 35
+      responses:
+        "200":
+          description: Successful response. Returns the status of the operation.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  msg:
+                    type: string
+                    description: The status of the operation.
+                example:
+                  msg: "product saved succesfully"

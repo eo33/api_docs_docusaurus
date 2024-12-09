@@ -1,0 +1,63 @@
+---
+id: get-product-list
+title: "Get Product list"
+description: "This endpoint allows you get the list of available products. It shows all available product."
+sidebar_label: "Get Product list"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1lUtv2zgQx78KMZcFAsGW07rZ6JYWu0WABRr0cTKMgKZGFrsUqXJGTg1D330xtKz1q0Au9UXGkPxxHv8Z7qBEMtG2bIOHAr7WlhT6sg3Ws9LOhRdS29CpNbLiGpWzxCpUSm+0dXrlULUxlJ1hmqhHVlTLAe3c5YYJZMB6TVAs4GlvgmUGEakNnpCg2MFtnsvn1KcvnTFIVHVOHTZP1GfkLnpSevTo6BoTPKNnQem2ddZoQU2/k/B2QKbGRss/3rYIBegY9RYysIwNHdnD6jsahgzaGFqMbPdePtvyaBNxtH4N2UUmUXXe/uhQ2RI928piVFWIKY2js30GXjf4Op7slFDPCbbR61ciKuvwCuYPUgmScG205hjnu2aFETKoQmw0QwGVC5qv8tPZaz6ebH2Np0eWazwKrvwQun2VB5r1jOvk6SWOA2un9qEIr/OWSQkl4Z6fN68EbTDSFZ/U8Zr1JqImJPVSo8cNnlRdWVJNKEURcnmfAf7UTetwFBe8m8/nela9va8QtbkrjSnvVzNEOMgFVjG8eMXSYaWYBw3A7C7PZ7P8zzfv5rd3kxdctTBW9E1+HhBLv1tpoyMenGT3Ph+yk/fpl8Hbq12KqBok0uuT0qXkzq8doF8e6DNokOsgiVhj6j/NNRQwPcwa8RCjZBuKxQ666KCAmrmlYjrlGqsuestdxFUMNDGhuajkMIGkWHsS9Nk5yAWjXR2Ii3me5xeIf2R5PL3MwPoqXMaZRqq0nZKxpK2npIVPLfqHp0dFLRpbDSOKxgEx+Kcenh5JpHZzI/r6+xCXeh8D3dykmWpZlAOX6yPkcNeXk7sgg0GvIptJPslT8wfiRqceHZT2EXkkybA9T8Tu/3n729+PfXsy/uRp67T14nEq2m7QyAJGjSwzkOKJbbdbacJv0fW9mH90GLdQLJYZbHS0SfPFYtlnUKMuMSZR/YtbKODBGGwl5I12XXorzh8Uqfwo149/fYW+/w8JPIhu
+sidebar_class_name: "get api-method"
+info_path: API/product/the-furniture-bros-product-openapi-specifications
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Product list"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/products"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows you get the list of available products. It shows all available product.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response. Returns a list of product.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"The unique identifier for the product."},"name":{"type":"string","description":"The name of the product."},"image":{"type":"string","description":"The filename of the product's image."},"price":{"type":"number","format":"float","description":"The price of the product."},"description":{"type":"string","description":"The description of the product."},"soldCount":{"type":"integer","description":"The total number of units sold."},"__v":{"type":"integer","description":"The version of the product. The version increases whenever the product is modified."}},"example":{"_id":"6555a1f49feeac7dccd9b1ee","name":"brown tablede","image":"1700110836527.webp","price":30,"description":"this is a brown table","soldCount":90,"__v":0}}}}}},"400":{"description":"See message description."},"500":{"description":"see message description."}}}
+>
+  
+</StatusCodes>
+
+
+      
