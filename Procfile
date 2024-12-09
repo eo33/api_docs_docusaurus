@@ -1,1 +1,1 @@
-web: npm run build && npm run serve --dev-addr=0.0.0.0:$PORT
+web: npm run serve -- --build --port $PORT --host 0.0.0.0
