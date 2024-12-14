@@ -48,7 +48,7 @@ const config: Config = {
         },
         sitemap: {
           lastmod: "date",
-          changefreq: "yearly",
+          changefreq: "monthly",
           priority: 0.5,
           filename: "sitemap.xml",
         },
