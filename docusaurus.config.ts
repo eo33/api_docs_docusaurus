@@ -46,12 +46,6 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
-        sitemap: {
-          lastmod: "date",
-          changefreq: "monthly",
-          priority: 0.5,
-          filename: "sitemap.xml",
-        },
       } satisfies Preset.Options,
     ],
   ],
