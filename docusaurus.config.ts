@@ -102,6 +102,15 @@ const config: Config = {
         },
       },
     ],
+    [
+      "docusaurus-biel",
+      {
+        enable: true,
+        project: "g8qfq12rzf",
+        headerTitle: "The Furniture Bros API Chatbot",
+        version: "latest",
+      },
+    ],
   ],
   themes: ["docusaurus-theme-openapi-docs"], // export theme components
 
